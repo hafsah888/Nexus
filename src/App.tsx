@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-
+import { CalendarPage } from './pages/calendar/CalendarPage';
 // Layouts
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
@@ -35,6 +35,7 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
+
           {/* Authentication Routes */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
@@ -84,6 +85,9 @@ function App() {
             <Route index element={<DealsPage />} />
           </Route>
           
+          <Route path="/calendar" element={<DashboardLayout />}>
+           <Route index element={<CalendarPage />} />
+          </Route>
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
             <Route index element={<ChatPage />} />
