@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { CalendarPage } from './pages/calendar/Calendarpage';
+import { CalendarPage } from './pages/calendar/CalendarPage';
 // Layouts
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
