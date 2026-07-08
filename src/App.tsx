@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { CalendarPage } from './pages/calendar/CalendarPage';
+import { VideoCallPage } from './pages/videocall/VideoCallPage';
 // Layouts
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
@@ -88,6 +89,11 @@ function App() {
           <Route path="/calendar" element={<DashboardLayout />}>
            <Route index element={<CalendarPage />} />
           </Route>
+
+          <Route path="/videocall" element={<DashboardLayout />}>
+           <Route index element={<VideoCallPage />} />
+          </Route>
+
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
             <Route index element={<ChatPage />} />
