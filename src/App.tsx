@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './context/AuthContext';
 import { CalendarPage } from './pages/calendar/CalendarPage';
 import { VideoCallPage } from './pages/videocall/VideoCallPage';
+import { PaymentsPage } from './pages/payments/PaymentsPage';
 // Layouts
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
@@ -92,6 +93,10 @@ function App() {
 
           <Route path="/videocall" element={<DashboardLayout />}>
            <Route index element={<VideoCallPage />} />
+          </Route>
+
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentsPage />} />
           </Route>
 
           {/* Chat Routes */}
